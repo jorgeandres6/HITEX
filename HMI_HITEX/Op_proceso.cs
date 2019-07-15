@@ -11,14 +11,15 @@ using System.Data.SqlClient;
 
 namespace HMI_HITEX
 {
-    public partial class Proceso : Form
+    public partial class Op_proceso : Form
     {
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Hitex.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public Proceso()
+        public Op_proceso()
         {
             InitializeComponent();
+
             try
             {
                 con.Open();
@@ -41,13 +42,6 @@ namespace HMI_HITEX
         {
             this.Hide();
             Form1 v = new Form1();
-            v.Show();
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main v = new Main();
             v.Show();
         }
     }

@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo2].[Table]
+(
+	[Id] INT NOT NULL PRIMARY KEY
+)

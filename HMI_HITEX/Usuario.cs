@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HMI_HITEX
 {
     public partial class Usuario : Form
     {
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Hitex.mdf;Integrated Security=True;Connect Timeout=30");
+
         public Usuario()
         {
             InitializeComponent();
@@ -38,9 +42,51 @@ namespace HMI_HITEX
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into [Table](usuario,contrasena,tipo) values(@user,@pas,@type)",con);
+                cmd.Parameters.AddWithValue("user", textBox1.Text);
+                cmd.Parameters.AddWithValue("pas", textBox2.Text);
+                cmd.Parameters.AddWithValue("type", comboBox1.SelectedItem.ToString());
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("{0} Exception caught.", m);
+            }
             textBox1.Text = "";
             textBox2.Text = "";
             MessageBox.Show("Usuario guardado exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //disp_data();
+        }
+
+        public void disp_data()
+        {
+            
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Table]", con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Console.WriteLine(sda);
+                //dataGridView1.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("{0} Exception caught.", m);
+            }
+            
+
+        }
+
+        private void Usuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
-}
+    }
