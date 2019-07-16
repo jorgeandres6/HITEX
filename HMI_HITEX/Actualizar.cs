@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace HMI_HITEX
 {
-    public partial class Proceso : Form
+    public partial class Actualizar : Form
     {
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Hitex.mdf;Integrated Security=True;Connect Timeout=30");
-
-        public Proceso()
+        public Actualizar()
         {
             InitializeComponent();
+
             try
             {
                 con.Open();
@@ -37,11 +37,9 @@ namespace HMI_HITEX
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Label7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 v = new Form1();
-            v.Show();
+
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -51,22 +49,35 @@ namespace HMI_HITEX
             v.Show();
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 v = new Form1();
+            v.Show();
+        }
+
         private void Button3_Click(object sender, EventArgs e)
         {
-            DateTime today = DateTime.Today;
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into reporte(Tipo_receta,Fecha_produccion) values(@rec,@fecha)", con);
-                cmd.Parameters.AddWithValue("rec", comboBox1.Text);
-                cmd.Parameters.AddWithValue("fecha", today.ToString("yyyy/MM/dd"));
+                SqlCommand cmd = new SqlCommand("UPDATE recetas SET tP1=@p1, tP2=@p2, tTDI=@tdi WHERE id=@id", con);
+                cmd.Parameters.AddWithValue("p1", textBox1.Text);
+                cmd.Parameters.AddWithValue("p2", textBox2.Text);
+                cmd.Parameters.AddWithValue("tdi", textBox3.Text);
+                cmd.Parameters.AddWithValue("id", comboBox1.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                MessageBox.Show("Formula actualizada exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception m)
             {
                 Console.WriteLine("{0} Exception caught.", m);
             }
+            
         }
     }
 }

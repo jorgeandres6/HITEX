@@ -44,5 +44,23 @@ namespace HMI_HITEX
             Form1 v = new Form1();
             v.Show();
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into reporte(Tipo_receta,Fecha_produccion) values(@rec,@fecha)", con);
+                cmd.Parameters.AddWithValue("rec", comboBox1.Text);
+                cmd.Parameters.AddWithValue("fecha", today.ToString("yyyy/MM/dd"));
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("{0} Exception caught.", m);
+            }
+        }
     }
 }

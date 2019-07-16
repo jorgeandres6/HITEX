@@ -51,5 +51,12 @@ namespace HMI_HITEX
             Reporte v = new Reporte();
             v.Show();
         }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Actualizar v = new Actualizar();
+            v.Show();
+        }
     }
 }
