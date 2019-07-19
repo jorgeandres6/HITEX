@@ -18,6 +18,7 @@ namespace HMI_HITEX
 
         public Form1()
         {
+            Console.WriteLine(Glob.Mpos);
             InitializeComponent();
         }
 

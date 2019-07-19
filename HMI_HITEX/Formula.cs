@@ -63,5 +63,10 @@ namespace HMI_HITEX
                 Console.WriteLine("{0} Exception caught.", m);
             }
         }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

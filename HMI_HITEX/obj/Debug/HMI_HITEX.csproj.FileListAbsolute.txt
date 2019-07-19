@@ -33,3 +33,5 @@ C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.exe
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.pdb
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Op_proceso.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Actualizar.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUMov.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUSeleccion.resources
