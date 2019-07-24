@@ -46,7 +46,7 @@ namespace HMI_HITEX
                     }
                     else
                     {
-                        Op_proceso v = new Op_proceso();
+                        F1 v = new F1();
                         v.Show();
                     }
                 }

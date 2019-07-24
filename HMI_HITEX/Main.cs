@@ -34,7 +34,7 @@ namespace HMI_HITEX
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Proceso v = new Proceso();
+            F1 v = new F1();
             v.Show();
         }
 

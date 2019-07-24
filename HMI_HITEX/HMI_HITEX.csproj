@@ -242,5 +242,101 @@
   <ItemGroup>
     <None Include="Img\ProcesoMezcla2_3_B.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Tanque\000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Mezclador\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Motor\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\C00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\I00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Flechas\Front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Flechas\izq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Mezclador\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Mezclador\I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\C00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Flechas\Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\D00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\D00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\D10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\D11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Motor\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Tanque\001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Tanque\110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Tanque\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\C10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\C11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\D10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\D11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\I00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\I10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\I11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiasP1P2\I1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\C10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\C11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\I10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\TuberiaTDI\I11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Nuevas\Motor\2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

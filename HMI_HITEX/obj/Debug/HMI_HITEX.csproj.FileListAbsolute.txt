@@ -22,7 +22,6 @@ C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.csprojAssemblyRe
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Form1.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Formula.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Main.resources
-C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Proceso.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Properties.Resources.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Reporte.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Usuario.resources
@@ -35,3 +34,4 @@ C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Op_proceso.resou
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Actualizar.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUMov.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUSeleccion.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.F1.resources
