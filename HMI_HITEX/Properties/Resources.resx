@@ -139,6 +139,9 @@
   <data name="C111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiaTDI\C11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="baseline_toggle_off_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\baseline_toggle_off_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Tanque\111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="D111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\D11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_toggle_on_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\baseline_toggle_on_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="D00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\D00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,6 +247,9 @@
   <data name="ProcesoMezcla2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\ProcesoMezcla2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Motor\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="110" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Tanque\110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,7 +262,7 @@
   <data name="C00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\C00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\Motor\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TanquePU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\PU\TanquePU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

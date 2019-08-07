@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
 
 namespace HMI_HITEX
 {
@@ -20,6 +22,38 @@ namespace HMI_HITEX
         {
             Console.WriteLine(Glob.Mpos);
             InitializeComponent();
+            VerTeclado();
+        }
+
+        void VerTeclado()
+        {
+            string windir = Environment.GetEnvironmentVariable("WINDIR");
+            string osk = null;
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "sysnative"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "system32"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = "osk.exe";
+            }
+
+            Process.Start(osk);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -39,6 +73,7 @@ namespace HMI_HITEX
                 {
                     this.Hide();
                     Console.WriteLine(dt.Rows[0][0].ToString());
+                    Glob.User = textBox1.Text;
                     if (dt.Rows[0][0].ToString()=="Administrador")
                     {
                         Main v = new Main();
@@ -65,6 +100,73 @@ namespace HMI_HITEX
         private void Label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox1_OnGotFocus(object sender, EventArgs e)
+        {
+            string windir = Environment.GetEnvironmentVariable("WINDIR");
+            string osk = null;
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "sysnative"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "system32"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = "osk.exe";
+            }
+
+            Process.Start(osk);
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            string windir = Environment.GetEnvironmentVariable("WINDIR");
+            string osk = null;
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "sysnative"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = Path.Combine(Path.Combine(windir, "system32"), "osk.exe");
+                if (!File.Exists(osk))
+                {
+                    osk = null;
+                }
+            }
+
+            if (osk == null)
+            {
+                osk = "osk.exe";
+            }
+
+            Process.Start(osk);
         }
     }
 }

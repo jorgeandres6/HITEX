@@ -133,6 +133,26 @@ namespace HMI_HITEX.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_toggle_off_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_toggle_off_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_toggle_on_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_toggle_on_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap C {
             get {
                 object obj = ResourceManager.GetObject("C", resourceCulture);
@@ -516,6 +536,16 @@ namespace HMI_HITEX.Properties {
         internal static System.Drawing.Bitmap ProcesoMezcla2_3_B {
             get {
                 object obj = ResourceManager.GetObject("ProcesoMezcla2_3_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TanquePU {
+            get {
+                object obj = ResourceManager.GetObject("TanquePU", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

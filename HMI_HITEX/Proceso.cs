@@ -15,6 +15,10 @@ namespace HMI_HITEX
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Hitex.mdf;Integrated Security=True;Connect Timeout=30");
 
+        DataTable dt = new DataTable();
+
+        bool automan = false;
+
         public F1()
         {
             InitializeComponent();
@@ -23,7 +27,6 @@ namespace HMI_HITEX
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM recetas", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
                 sda.Fill(dt);
                 con.Close();
                 comboBox1.DataSource = dt;
@@ -193,9 +196,14 @@ namespace HMI_HITEX
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into reporte(Tipo_receta,Fecha_produccion) values(@rec,@fecha)", con);
+                SqlCommand cmd = new SqlCommand("insert into reporte(Tipo_receta,Fecha_produccion,Poliol1_usado_Kg,Poliol2_usado_Kg,TDI_usado_Kg,Usuario) values(@rec,@fecha,@p1,@p2,@tdi,@usuario)", con);
                 cmd.Parameters.AddWithValue("rec", comboBox1.Text);
                 cmd.Parameters.AddWithValue("fecha", today.ToString("yyyy/MM/dd"));
+                int i = int.Parse(comboBox1.Text)-1;
+                cmd.Parameters.AddWithValue("p1", dt.Rows[i][1].ToString());
+                cmd.Parameters.AddWithValue("p2", dt.Rows[i][2].ToString());
+                cmd.Parameters.AddWithValue("tdi", dt.Rows[i][3].ToString());
+                cmd.Parameters.AddWithValue("usuario", Glob.User);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -445,15 +453,21 @@ namespace HMI_HITEX
 
         private void Button7_Click(object sender, EventArgs e)
         {
-            //MOTOR MEZCLADOR
-            MotorMM.Image = HMI_HITEX.Properties.Resources._2;
 
-            MotorMMD.Image = HMI_HITEX.Properties.Resources._2;
+            DialogResult res = MessageBox.Show("Esta seguro que desea realizar la descarga?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
+            {
+                //MOTOR MEZCLADOR
+                MotorMM.Image = HMI_HITEX.Properties.Resources._2;
 
-            MotorMMI.Image = HMI_HITEX.Properties.Resources._2;
-            //FIN MOTOR MEZCLADOR
+                MotorMMD.Image = HMI_HITEX.Properties.Resources._2;
 
-            tMR.Enabled = true;
+                MotorMMI.Image = HMI_HITEX.Properties.Resources._2;
+                //FIN MOTOR MEZCLADOR
+
+                tMR.Enabled = true;
+            }
+
         }
 
         private void TMR_Tick(object sender, EventArgs e)
@@ -468,9 +482,50 @@ namespace HMI_HITEX
 
             button3.Enabled = true;
 
+            tMR.Stop();
+
             MessageBox.Show("Proceso culminado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            tMR.Stop();
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            if (automan)
+            {
+                pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
+                automan = false;
+                button3.Enabled = false;
+            }
+            else
+            {
+                pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+                automan = true;
+                button3.Enabled = true;
+            };
+        }
+
+        private void TP2_Click(object sender, EventArgs e)
+        {
+            if (!automan)
+            {
+                PUTanque v = new PUTanque();
+                v.Show();
+            }
         }
     }
 }

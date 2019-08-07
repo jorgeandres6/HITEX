@@ -35,3 +35,4 @@ C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Actualizar.resou
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUMov.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUSeleccion.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.F1.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUTanque.resources
