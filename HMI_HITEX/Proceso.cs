@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using S7.Net;
+using Sharp7;
 
 namespace HMI_HITEX
 {
@@ -19,9 +21,49 @@ namespace HMI_HITEX
 
         bool automan = false;
 
-        public F1()
+        private Plc plc = null;
+
+
+    public F1()
         {
             InitializeComponent();
+
+            //CpuType cpu = (CpuType)Enum.Parse(typeof(CpuType), "S71200");
+            plc = new Plc(CpuType.S71200, "192.168.0.100", 0, 1);
+            plc.Open();
+
+            if (plc.IsConnected)
+            {
+                Console.WriteLine ("conectado");
+            }
+
+            /*var client = new S7Client();
+            int conex = client.ConnectTo("192.168.0.100", 0, 0);
+
+            if (conex == 0)
+            {
+                Console.WriteLine("ok");
+            }
+
+            var bufferAux = new byte[1];
+
+            int DBN;
+            int size;
+
+            DBN = System.Convert.ToInt32(1);
+            size = System.Convert.ToInt32(bufferAux.Length);
+
+            int readRes = client.DBRead(DBN, 0, size, bufferAux);
+
+            if (readRes == 0)
+            {
+                Console.WriteLine("Lectura correcta");
+            }
+            else
+            {
+                Console.WriteLine(readRes);
+            }*/
+
             try
             {
                 con.Open();
@@ -510,13 +552,27 @@ namespace HMI_HITEX
                 pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
                 automan = false;
                 button3.Enabled = false;
+                plc.Write("DB1.DBX14.0",false);
             }
             else
             {
                 pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
                 automan = true;
                 button3.Enabled = true;
+                plc.Write("DB1.DBX14.0", true);
             };
+            bool aux = (bool)plc.Read("DB1.DBX14.0");
+            Console.WriteLine(aux);
+            /*if (plc.IsConnected)
+            {
+                Console.WriteLine("conectado");
+                //plc.ReadBytes(DataType.DataBlock, 1, 0, 1);
+                var result = plc.Read("DB1.DBX14.0");
+                Console.WriteLine(result);
+                //plc.Write(0, true);
+            }*/
+            //var dwords = plc.ReadBytes(DataType.DataBlock, 1, 0, 10);
+            //Console.WriteLine(aux);
         }
 
         private void TP2_Click(object sender, EventArgs e)
