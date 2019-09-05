@@ -42,22 +42,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.tMR = new System.Windows.Forms.Timer(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.MotorMMD = new System.Windows.Forms.PictureBox();
             this.STDID = new System.Windows.Forms.PictureBox();
             this.FSTDID = new System.Windows.Forms.PictureBox();
@@ -86,14 +70,31 @@
             this.TP2 = new System.Windows.Forms.PictureBox();
             this.Mezclador = new System.Windows.Forms.PictureBox();
             this.TP1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.tMR = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.BDerecha = new System.Windows.Forms.Button();
+            this.BIzquierda = new System.Windows.Forms.Button();
+            this.BCentro = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.GB1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MotorMMD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.STDID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSTDID)).BeginInit();
@@ -122,6 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.TP2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mezclador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TP1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -147,6 +150,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(395, 46);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -163,6 +167,9 @@
             // GB1
             // 
             this.GB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GB1.Controls.Add(this.BCentro);
+            this.GB1.Controls.Add(this.BIzquierda);
+            this.GB1.Controls.Add(this.BDerecha);
             this.GB1.Controls.Add(this.groupBox5);
             this.GB1.Controls.Add(this.groupBox4);
             this.GB1.Controls.Add(this.groupBox1);
@@ -302,172 +309,6 @@
             this.label1.Size = new System.Drawing.Size(83, 39);
             this.label1.TabIndex = 32;
             this.label1.Text = "20.0";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 4000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 2000;
-            this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 5000;
-            this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
-            // 
-            // timer5
-            // 
-            this.timer5.Interval = 300;
-            this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(1482, 357);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 692);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Controles";
-            // 
-            // timer6
-            // 
-            this.timer6.Enabled = true;
-            this.timer6.Tick += new System.EventHandler(this.Timer6_Tick);
-            // 
-            // tMR
-            // 
-            this.tMR.Interval = 3000;
-            this.tMR.Tick += new System.EventHandler(this.TMR_Tick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 39);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Automatico";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(303, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 39);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Manual";
-            this.label8.Click += new System.EventHandler(this.Label8_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(18, 423);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(420, 125);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Descargar Mezclador";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(18, 555);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(420, 125);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Cargar Polioles";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(18, 290);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(420, 125);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Mover Mezclador";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(18, 157);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(420, 125);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Iniciar Proceso";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(1482, 13);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 174);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Menu";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // MotorMMD
             // 
@@ -777,6 +618,172 @@
             this.TP1.TabIndex = 0;
             this.TP1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 4000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 2000;
+            this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 5000;
+            this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
+            // 
+            // timer5
+            // 
+            this.timer5.Interval = 300;
+            this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(1482, 357);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(447, 692);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Controles";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(302, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 39);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Manual";
+            this.label8.Click += new System.EventHandler(this.Label8_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(18, 423);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(420, 125);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Descargar Mezclador";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(18, 555);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(420, 125);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Cargar Polioles";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+            this.pictureBox1.Location = new System.Drawing.Point(204, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(18, 290);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(420, 125);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Mover Mezclador";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(18, 157);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(420, 125);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Iniciar Proceso";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(13, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(187, 39);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Automatico";
+            // 
+            // timer6
+            // 
+            this.timer6.Enabled = true;
+            this.timer6.Tick += new System.EventHandler(this.Timer6_Tick);
+            // 
+            // tMR
+            // 
+            this.tMR.Interval = 3000;
+            this.tMR.Tick += new System.EventHandler(this.TMR_Tick);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(1482, 13);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 189);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Menu";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
@@ -787,12 +794,42 @@
             this.button1.Location = new System.Drawing.Point(1714, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 174);
+            this.button1.Size = new System.Drawing.Size(215, 189);
             this.button1.TabIndex = 3;
             this.button1.Text = "Cerrar Sesion";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // BDerecha
+            // 
+            this.BDerecha.Location = new System.Drawing.Point(19, 568);
+            this.BDerecha.Name = "BDerecha";
+            this.BDerecha.Size = new System.Drawing.Size(86, 63);
+            this.BDerecha.TabIndex = 35;
+            this.BDerecha.Text = "Der";
+            this.BDerecha.UseVisualStyleBackColor = true;
+            this.BDerecha.Click += new System.EventHandler(this.BDerecha_Click);
+            // 
+            // BIzquierda
+            // 
+            this.BIzquierda.Location = new System.Drawing.Point(18, 653);
+            this.BIzquierda.Name = "BIzquierda";
+            this.BIzquierda.Size = new System.Drawing.Size(86, 63);
+            this.BIzquierda.TabIndex = 36;
+            this.BIzquierda.Text = "Izq";
+            this.BIzquierda.UseVisualStyleBackColor = true;
+            this.BIzquierda.Click += new System.EventHandler(this.BIzquierda_Click);
+            // 
+            // BCentro
+            // 
+            this.BCentro.Location = new System.Drawing.Point(18, 739);
+            this.BCentro.Name = "BCentro";
+            this.BCentro.Size = new System.Drawing.Size(85, 64);
+            this.BCentro.TabIndex = 37;
+            this.BCentro.Text = "Cent";
+            this.BCentro.UseVisualStyleBackColor = true;
+            this.BCentro.Click += new System.EventHandler(this.BCentro_Click);
             // 
             // F1
             // 
@@ -818,9 +855,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MotorMMD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.STDID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSTDID)).EndInit();
@@ -849,6 +883,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TP2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mezclador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TP1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -912,5 +949,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button BCentro;
+        private System.Windows.Forms.Button BIzquierda;
+        private System.Windows.Forms.Button BDerecha;
     }
 }
