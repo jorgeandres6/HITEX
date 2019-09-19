@@ -50,10 +50,11 @@ namespace HMI_HITEX
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into recetas(tP1,tP2,tTDI) values(@p1,@p2,@tdi)", con);
+                SqlCommand cmd = new SqlCommand("insert into recetas(tP1,tP2,tTDI,Nombre) values(@p1,@p2,@tdi,@Nombre)", con);
                 cmd.Parameters.AddWithValue("p1", textBox1.Text);
                 cmd.Parameters.AddWithValue("p2", textBox2.Text);
                 cmd.Parameters.AddWithValue("tdi", textBox3.Text);
+                cmd.Parameters.AddWithValue("Nombre", textBox4.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Receta almacenada exitosamente", "Receta almacenada", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -65,6 +66,11 @@ namespace HMI_HITEX
         }
 
         private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
         {
 
         }

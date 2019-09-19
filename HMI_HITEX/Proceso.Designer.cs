@@ -33,6 +33,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.GB1 = new System.Windows.Forms.GroupBox();
+            this.BCentro = new System.Windows.Forms.Button();
+            this.BIzquierda = new System.Windows.Forms.Button();
+            this.BDerecha = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,7 +81,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -87,9 +89,6 @@
             this.tMR = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BDerecha = new System.Windows.Forms.Button();
-            this.BIzquierda = new System.Windows.Forms.Button();
-            this.BCentro = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.GB1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -211,6 +210,36 @@
             this.GB1.TabIndex = 5;
             this.GB1.TabStop = false;
             this.GB1.Text = "Proceso";
+            // 
+            // BCentro
+            // 
+            this.BCentro.Location = new System.Drawing.Point(18, 739);
+            this.BCentro.Name = "BCentro";
+            this.BCentro.Size = new System.Drawing.Size(85, 64);
+            this.BCentro.TabIndex = 37;
+            this.BCentro.Text = "Cent";
+            this.BCentro.UseVisualStyleBackColor = true;
+            this.BCentro.Click += new System.EventHandler(this.BCentro_Click);
+            // 
+            // BIzquierda
+            // 
+            this.BIzquierda.Location = new System.Drawing.Point(18, 653);
+            this.BIzquierda.Name = "BIzquierda";
+            this.BIzquierda.Size = new System.Drawing.Size(86, 63);
+            this.BIzquierda.TabIndex = 36;
+            this.BIzquierda.Text = "Izq";
+            this.BIzquierda.UseVisualStyleBackColor = true;
+            this.BIzquierda.Click += new System.EventHandler(this.BIzquierda_Click);
+            // 
+            // BDerecha
+            // 
+            this.BDerecha.Location = new System.Drawing.Point(19, 568);
+            this.BDerecha.Name = "BDerecha";
+            this.BDerecha.Size = new System.Drawing.Size(86, 63);
+            this.BDerecha.TabIndex = 35;
+            this.BDerecha.Text = "Der";
+            this.BDerecha.UseVisualStyleBackColor = true;
+            this.BDerecha.Click += new System.EventHandler(this.BDerecha_Click);
             // 
             // groupBox5
             // 
@@ -607,6 +636,7 @@
             this.Mezclador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Mezclador.TabIndex = 4;
             this.Mezclador.TabStop = false;
+            this.Mezclador.Click += new System.EventHandler(this.Mezclador_Click);
             // 
             // TP1
             // 
@@ -617,6 +647,7 @@
             this.TP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TP1.TabIndex = 0;
             this.TP1.TabStop = false;
+            this.TP1.Click += new System.EventHandler(this.TP1_Click);
             // 
             // timer1
             // 
@@ -647,7 +678,6 @@
             // 
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button3);
@@ -687,21 +717,6 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.Button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(18, 555);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(420, 125);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Cargar Polioles";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // pictureBox1
             // 
@@ -801,36 +816,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // BDerecha
-            // 
-            this.BDerecha.Location = new System.Drawing.Point(19, 568);
-            this.BDerecha.Name = "BDerecha";
-            this.BDerecha.Size = new System.Drawing.Size(86, 63);
-            this.BDerecha.TabIndex = 35;
-            this.BDerecha.Text = "Der";
-            this.BDerecha.UseVisualStyleBackColor = true;
-            this.BDerecha.Click += new System.EventHandler(this.BDerecha_Click);
-            // 
-            // BIzquierda
-            // 
-            this.BIzquierda.Location = new System.Drawing.Point(18, 653);
-            this.BIzquierda.Name = "BIzquierda";
-            this.BIzquierda.Size = new System.Drawing.Size(86, 63);
-            this.BIzquierda.TabIndex = 36;
-            this.BIzquierda.Text = "Izq";
-            this.BIzquierda.UseVisualStyleBackColor = true;
-            this.BIzquierda.Click += new System.EventHandler(this.BIzquierda_Click);
-            // 
-            // BCentro
-            // 
-            this.BCentro.Location = new System.Drawing.Point(18, 739);
-            this.BCentro.Name = "BCentro";
-            this.BCentro.Size = new System.Drawing.Size(85, 64);
-            this.BCentro.TabIndex = 37;
-            this.BCentro.Text = "Cent";
-            this.BCentro.UseVisualStyleBackColor = true;
-            this.BCentro.Click += new System.EventHandler(this.BCentro_Click);
-            // 
             // F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -905,7 +890,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.GroupBox groupBox3;

@@ -28,7 +28,8 @@ namespace HMI_HITEX
                 sda.Fill(dt);
                 con.Close();
                 comboBox1.DataSource = dt;
-                comboBox1.DisplayMember = "id";
+                //comboBox1.ValueMember = "id";
+                comboBox1.DisplayMember = "Nombre";
 
             }
             catch (Exception m)
@@ -61,11 +62,11 @@ namespace HMI_HITEX
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE recetas SET tP1=@p1, tP2=@p2, tTDI=@tdi WHERE id=@id", con);
+                SqlCommand cmd = new SqlCommand("UPDATE recetas SET tP1=@p1, tP2=@p2, tTDI=@tdi WHERE Nombre=@Nombre", con);
                 cmd.Parameters.AddWithValue("p1", textBox1.Text);
                 cmd.Parameters.AddWithValue("p2", textBox2.Text);
                 cmd.Parameters.AddWithValue("tdi", textBox3.Text);
-                cmd.Parameters.AddWithValue("id", comboBox1.Text);
+                cmd.Parameters.AddWithValue("Nombre", comboBox1.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 textBox1.Text = "";

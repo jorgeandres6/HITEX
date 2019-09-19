@@ -35,7 +35,7 @@ namespace HMI_HITEX
             Tanque.Controls.Add(Motor);
             Motor.Location = new Point(100, 0);
 
-            ve = (bool)plc.Read("DB1.DBX16.2");
+            ve = (bool)plc.Read("DB1.DBX16.5");
 
             if (ve)
             {
@@ -87,15 +87,15 @@ namespace HMI_HITEX
             {
                 pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
                 ve = false;
-                plc.Write("DB1.DBX14.5", true);
-                plc.Write("DB1.DBX14.6", true);
+                plc.Write("DB1.DBX14.5", false);
+                plc.Write("DB1.DBX14.6", false);
             }
             else
             {
                 pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
                 ve = true;
-                plc.Write("DB1.DBX14.5", false);
-                plc.Write("DB1.DBX14.6", false);
+                plc.Write("DB1.DBX14.5", true);
+                plc.Write("DB1.DBX14.6", true);
             };
         }
 
@@ -148,7 +148,7 @@ namespace HMI_HITEX
 
         private void Tanque_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void TmrGlobal_Tick(object sender, EventArgs e)

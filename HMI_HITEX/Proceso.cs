@@ -19,13 +19,17 @@ namespace HMI_HITEX
 
         DataTable dt = new DataTable();
 
-        bool automan = true;
-
         private Plc plc = null;
 
         System.Collections.BitArray salidasPLCbits;
 
-    public F1()
+        int Vp1;
+        int Vp2;
+        int Vtdi;
+
+        bool automan;
+
+        public F1()
         {
             InitializeComponent();
 
@@ -38,10 +42,27 @@ namespace HMI_HITEX
                 Console.WriteLine ("conectado");
             }
 
-            plc.Write("DB1.DBD2", 10000); //Temporizador P1
+            /*plc.Write("DB1.DBD2", 10000); //Temporizador P1
             plc.Write("DB1.DBD6", 5000); //Temporizador P2
-            plc.Write("DB1.DBD10", 8000); //Temporizador TDI
-            plc.Write("DB1.DBX14.0", false);
+            plc.Write("DB1.DBD10", 8000); //Temporizador TDI*/
+            //plc.Write("DB1.DBX14.0", false);
+
+            automan = (bool)plc.Read("DB1.DBX14.0");
+
+            if (automan)
+            {
+                pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
+                automan = false;
+                button3.Enabled = false;
+            }
+            else
+            {
+                pictureBox1.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+                automan = true;
+                button3.Enabled = true;
+            };
+
+
             //plc.Write("DB1.DBX14.6", false);
             //Inicio en automatico
 
@@ -86,7 +107,7 @@ namespace HMI_HITEX
                 sda.Fill(dt);
                 con.Close();
                 comboBox1.DataSource = dt;
-                comboBox1.DisplayMember = "id";
+                comboBox1.DisplayMember = "Nombre";
                 
 
             }
@@ -205,6 +226,8 @@ namespace HMI_HITEX
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            timer6.Stop();
+            plc.Close();
             this.Hide();
             Form1 v = new Form1();
             v.Show();
@@ -212,6 +235,8 @@ namespace HMI_HITEX
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            timer6.Stop();
+            plc.Close();
             this.Hide();
             Main v = new Main();
             v.Show();
@@ -706,7 +731,11 @@ namespace HMI_HITEX
 
         private void PictureBox4_Click(object sender, EventArgs e)
         {
-
+            if (!automan)
+            {
+                PUTanqueTDI v = new PUTanqueTDI();
+                v.Show();
+            }
         }
 
         private void Button7_Click(object sender, EventArgs e)
@@ -804,6 +833,13 @@ namespace HMI_HITEX
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataRow valores = dt.Rows[comboBox1.SelectedIndex];
+            Vp1 = (int)valores["tP1"];
+            Vp2 = (int)valores["tP2"]; 
+            Vtdi = (int)valores["tTDI"];
+            plc.Write("DB1.DBW28", Vp1);
+            plc.Write("DB1.DBW30", Vp2);
+            plc.Write("DB1.DBW32", Vtdi);
 
         }
 
@@ -821,6 +857,24 @@ namespace HMI_HITEX
         {
             bool pe = (bool)plc.Read("DB1.DBX15.6");
             plc.Write("DB1.DBX15.6", !pe);
+        }
+
+        private void TP1_Click(object sender, EventArgs e)
+        {
+            if (!automan)
+            {
+                PUTanqueP1 v = new PUTanqueP1();
+                v.Show();
+            }
+        }
+
+        private void Mezclador_Click(object sender, EventArgs e)
+        {
+            if (!automan)
+            {
+                PUMezclador v = new PUMezclador();
+                v.Show();
+            }
         }
     }
 }

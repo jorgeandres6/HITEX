@@ -151,7 +151,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(237, 499);
+            this.label12.Location = new System.Drawing.Point(237, 317);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(99, 29);
             this.label12.TabIndex = 23;
@@ -192,7 +192,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(232, 321);
+            this.label9.Location = new System.Drawing.Point(237, 497);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 29);
             this.label9.TabIndex = 19;
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1088, 823);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

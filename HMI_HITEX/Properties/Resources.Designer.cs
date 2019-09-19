@@ -463,6 +463,46 @@ namespace HMI_HITEX.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_check_circle_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_check_circle_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_exit_to_app_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_exit_to_app_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_play_arrow_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_play_arrow_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_settings_applications_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_settings_applications_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap izq {
             get {
                 object obj = ResourceManager.GetObject("izq", resourceCulture);
@@ -536,6 +576,26 @@ namespace HMI_HITEX.Properties {
         internal static System.Drawing.Bitmap ProcesoMezcla2_3_B {
             get {
                 object obj = ResourceManager.GetObject("ProcesoMezcla2_3_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tanque {
+            get {
+                object obj = ResourceManager.GetObject("Tanque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tanque2 {
+            get {
+                object obj = ResourceManager.GetObject("Tanque2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

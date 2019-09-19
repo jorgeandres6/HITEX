@@ -58,5 +58,17 @@ namespace HMI_HITEX
             Actualizar v = new Actualizar();
             v.Show();
         }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Calibracion v = new Calibracion();
+            v.Show();
+        }
     }
 }

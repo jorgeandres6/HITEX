@@ -38,3 +38,7 @@ C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.F1.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUTanque.resources
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\bin\Debug\Sharp7.dll
 C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\bin\Debug\Sharp7.pdb
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUTanqueP1.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUTanqueTDI.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.PUMezclador.resources
+C:\Users\ADMIN\source\repos\HITEX\HMI_HITEX\obj\Debug\HMI_HITEX.Calibracion.resources
