@@ -23,9 +23,11 @@ namespace HMI_HITEX
 
         System.Collections.BitArray salidasPLCbits;
 
-        int Vp1;
-        int Vp2;
-        int Vtdi;
+        System.Collections.BitArray Brazo;
+
+        ushort Vp1;
+        ushort Vp2;
+        ushort Vtdi;
 
         bool automan;
 
@@ -247,6 +249,10 @@ namespace HMI_HITEX
         
             plc.Write("DB1.DBX0.0", true);
 
+            PUSeleccion v = new PUSeleccion();
+            v.Show();
+            timer5.Stop();
+
             /*
             TP1.Image = HMI_HITEX.Properties.Resources._111;
             TTDI.Image = HMI_HITEX.Properties.Resources._111;*/
@@ -376,9 +382,7 @@ namespace HMI_HITEX
 
         private void Timer5_Tick(object sender, EventArgs e)
         {
-            PUSeleccion v = new PUSeleccion();
-            v.Show();
-            timer5.Stop();
+            
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -394,58 +398,62 @@ namespace HMI_HITEX
 
             salidasPLCbits = new System.Collections.BitArray(salidasPLC);
 
+            var posBrazo = plc.ReadBytes(DataType.DataBlock, 1, 15, 1);
+
+            Brazo = new System.Collections.BitArray(posBrazo);
+
             //Tanque 1
-            if (salidasPLCbits[2] && !salidasPLCbits[16] && salidasPLCbits[3]) 
+            if (salidasPLCbits[2] && !salidasPLCbits[16] && !salidasPLCbits[3]) 
             {
                 TP1.Image = HMI_HITEX.Properties.Resources._110;
             }
-            else if(salidasPLCbits[2] && salidasPLCbits[16] && salidasPLCbits[3])
+            else if(salidasPLCbits[2] && salidasPLCbits[16] && !salidasPLCbits[3])
             {
                 TP1.Image = HMI_HITEX.Properties.Resources._111;
             }
-            else if (!salidasPLCbits[2] && !salidasPLCbits[16] && !salidasPLCbits[3])
+            else if (!salidasPLCbits[2] && !salidasPLCbits[16] && salidasPLCbits[3])
             {
                 TP1.Image = HMI_HITEX.Properties.Resources._000;
             }
-            else if(!salidasPLCbits[2] && salidasPLCbits[16] && !salidasPLCbits[3])
+            else if(!salidasPLCbits[2] && salidasPLCbits[16] && salidasPLCbits[3])
             {
                 TP1.Image = HMI_HITEX.Properties.Resources._001;
             }
             //fin tanque 1
 
             //Tanque 2
-            if (salidasPLCbits[5] && !salidasPLCbits[17] && salidasPLCbits[6])
+            if (salidasPLCbits[5] && !salidasPLCbits[17] && !salidasPLCbits[6])
             {
                 TP2.Image = HMI_HITEX.Properties.Resources._110;
             }
-            else if (salidasPLCbits[5] && salidasPLCbits[17] && salidasPLCbits[6])
+            else if (salidasPLCbits[5] && salidasPLCbits[17] && !salidasPLCbits[6])
             {
                 TP2.Image = HMI_HITEX.Properties.Resources._111;
             }
-            else if (!salidasPLCbits[5] && !salidasPLCbits[17] && !salidasPLCbits[6])
+            else if (!salidasPLCbits[5] && !salidasPLCbits[17] && salidasPLCbits[6])
             {
                 TP2.Image = HMI_HITEX.Properties.Resources._000;
             }
-            else if (!salidasPLCbits[5] && salidasPLCbits[17] && !salidasPLCbits[6])
+            else if (!salidasPLCbits[5] && salidasPLCbits[17] && salidasPLCbits[6])
             {
                 TP2.Image = HMI_HITEX.Properties.Resources._001;
             }
             //fin tanque 2
 
             //Tanque TDI
-            if (salidasPLCbits[8] && !salidasPLCbits[18] && salidasPLCbits[9])
+            if (salidasPLCbits[8] && !salidasPLCbits[18] && !salidasPLCbits[9])
             {
                 TTDI.Image = HMI_HITEX.Properties.Resources._110;
             }
-            else if (salidasPLCbits[8] && salidasPLCbits[18] && salidasPLCbits[9])
+            else if (salidasPLCbits[8] && salidasPLCbits[18] && !salidasPLCbits[9])
             {
                 TTDI.Image = HMI_HITEX.Properties.Resources._111;
             }
-            else if (!salidasPLCbits[8] && !salidasPLCbits[18] && !salidasPLCbits[9])
+            else if (!salidasPLCbits[8] && !salidasPLCbits[18] && salidasPLCbits[9])
             {
                 TTDI.Image = HMI_HITEX.Properties.Resources._000;
             }
-            else if (!salidasPLCbits[8] && salidasPLCbits[18] && !salidasPLCbits[9])
+            else if (!salidasPLCbits[8] && salidasPLCbits[18] && salidasPLCbits[9])
             {
                 TTDI.Image = HMI_HITEX.Properties.Resources._001;
             }
@@ -489,19 +497,19 @@ namespace HMI_HITEX
             //TUBERIAS
 
             //P1
-            if (salidasPLCbits[16] && salidasPLCbits[4])
+            if (salidasPLCbits[16] && !salidasPLCbits[4])
             {
                 SP1D.Image = HMI_HITEX.Properties.Resources.D111;
                 SP1C.Image = HMI_HITEX.Properties.Resources.C11;
                 SP1I.Image = HMI_HITEX.Properties.Resources.I11;
             }
-            else if (!salidasPLCbits[16] && salidasPLCbits[4])
+            else if (!salidasPLCbits[16] && !salidasPLCbits[4])
             {
                 SP1D.Image = HMI_HITEX.Properties.Resources.D101;
                 SP1C.Image = HMI_HITEX.Properties.Resources.C10;
                 SP1I.Image = HMI_HITEX.Properties.Resources.I10;
             }
-            else if (!salidasPLCbits[16] && !salidasPLCbits[4])
+            else if (!salidasPLCbits[16] && salidasPLCbits[4])
             {
                 SP1D.Image = HMI_HITEX.Properties.Resources.D003;
                 SP1C.Image = HMI_HITEX.Properties.Resources.C002;
@@ -510,19 +518,19 @@ namespace HMI_HITEX
             //FIN P1
 
             //P2
-            if (salidasPLCbits[17] && salidasPLCbits[7])
+            if (salidasPLCbits[17] && !salidasPLCbits[7])
             {
                 SP2D.Image = HMI_HITEX.Properties.Resources.D111;
                 SP2C.Image = HMI_HITEX.Properties.Resources.C11;
                 SP2I.Image = HMI_HITEX.Properties.Resources.I11;
             }
-            else if (!salidasPLCbits[17] && salidasPLCbits[7])
+            else if (!salidasPLCbits[17] && !salidasPLCbits[7])
             {
                 SP2D.Image = HMI_HITEX.Properties.Resources.D101;
                 SP2C.Image = HMI_HITEX.Properties.Resources.C10;
                 SP2I.Image = HMI_HITEX.Properties.Resources.I10;
             }
-            else if (!salidasPLCbits[17] && !salidasPLCbits[7])
+            else if (!salidasPLCbits[17] && salidasPLCbits[7])
             {
                 SP2D.Image = HMI_HITEX.Properties.Resources.D003;
                 SP2C.Image = HMI_HITEX.Properties.Resources.C002;
@@ -531,19 +539,19 @@ namespace HMI_HITEX
             //FIN P2
 
             //TDI
-            if (salidasPLCbits[18] && salidasPLCbits[10])
+            if (salidasPLCbits[18] && !salidasPLCbits[10])
             {
                 STDID.Image = HMI_HITEX.Properties.Resources.D11;
                 TubTDIC.Image = HMI_HITEX.Properties.Resources.I112;
                 TubTDII.Image = HMI_HITEX.Properties.Resources.C111;
             }
-            else if (!salidasPLCbits[18] && salidasPLCbits[10])
+            else if (!salidasPLCbits[18] && !salidasPLCbits[10])
             {
                 STDID.Image = HMI_HITEX.Properties.Resources.D10;
                 TubTDIC.Image = HMI_HITEX.Properties.Resources.I101;
                 TubTDII.Image = HMI_HITEX.Properties.Resources.C101;
             }
-            else if (!salidasPLCbits[18] && !salidasPLCbits[10])
+            else if (!salidasPLCbits[18] && salidasPLCbits[10])
             {
                 STDID.Image = HMI_HITEX.Properties.Resources.D002;
                 TubTDIC.Image = HMI_HITEX.Properties.Resources.I002;
@@ -560,7 +568,7 @@ namespace HMI_HITEX
                 MotorMMD.Image = HMI_HITEX.Properties.Resources._1;
                 MotorMMI.Image = HMI_HITEX.Properties.Resources._1;
             }
-            else if (!salidasPLCbits[19] && salidasPLCbits[20])
+            else if (salidasPLCbits[19] && salidasPLCbits[20])
             {
                 MotorMM.Image = HMI_HITEX.Properties.Resources._2;
                 MotorMMD.Image = HMI_HITEX.Properties.Resources._2;
@@ -586,7 +594,23 @@ namespace HMI_HITEX
             {
                 plc.Write("DB1.DBX14.1", false);
             }
-            
+
+            //Posicion Brazo
+            if (Brazo[7]) //centro
+            {
+                Glob.Mpos = 1;
+            }
+
+            if (Brazo[5]) //derecha
+            {
+                Glob.Mpos = 3;
+            }
+
+            if (Brazo[6]) //izquierda
+            {
+                Glob.Mpos = 2;
+            }
+
             //Ciclo global
             switch (Glob.Mpos)
             {
@@ -834,9 +858,9 @@ namespace HMI_HITEX
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRow valores = dt.Rows[comboBox1.SelectedIndex];
-            Vp1 = (int)valores["tP1"];
-            Vp2 = (int)valores["tP2"]; 
-            Vtdi = (int)valores["tTDI"];
+            Vp1 = Convert.ToUInt16(valores["tP1"]);
+            Vp2 = Convert.ToUInt16(valores["tP2"]); 
+            Vtdi = Convert.ToUInt16(valores["tTDI"]);
             plc.Write("DB1.DBW28", Vp1);
             plc.Write("DB1.DBW30", Vp2);
             plc.Write("DB1.DBW32", Vtdi);
@@ -875,6 +899,11 @@ namespace HMI_HITEX
                 PUMezclador v = new PUMezclador();
                 v.Show();
             }
+        }
+
+        private void GroupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

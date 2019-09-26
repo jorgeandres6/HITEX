@@ -24,18 +24,18 @@ namespace HMI_HITEX
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            plc.Write("DB1.DBX26.0", true);
-            Glob.Mpos = 1;
-            this.Hide();
+            plc.Write("DB1.DBX16.0", true);
+            //Glob.Mpos = 1;
+            this.Close();
             PUMov v = new PUMov();
             v.Show();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            plc.Write("DB1.DBX26.1", true);
-            Glob.Mpos = 2;
-            this.Hide();
+            plc.Write("DB1.DBX26.2", true);
+            //Glob.Mpos = 2;
+            this.Close();
             PUMov v = new PUMov();
             v.Show();
         }
@@ -47,9 +47,9 @@ namespace HMI_HITEX
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            plc.Write("DB1.DBX26.2", true);
-            Glob.Mpos = 3;
-            this.Hide();
+            plc.Write("DB1.DBX26.1", true);
+            //Glob.Mpos = 3;
+            this.Close();
             PUMov v = new PUMov();
             v.Show();
         }

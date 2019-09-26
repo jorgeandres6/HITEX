@@ -201,7 +201,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(340, 217);
+            this.label3.Location = new System.Drawing.Point(340, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(229, 29);
             this.label3.TabIndex = 14;
@@ -211,7 +211,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(36, 217);
+            this.label2.Location = new System.Drawing.Point(38, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 29);
             this.label2.TabIndex = 13;

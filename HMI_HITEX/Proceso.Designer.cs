@@ -36,15 +36,6 @@
             this.BCentro = new System.Windows.Forms.Button();
             this.BIzquierda = new System.Windows.Forms.Button();
             this.BDerecha = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.MotorMMD = new System.Windows.Forms.PictureBox();
             this.STDID = new System.Windows.Forms.PictureBox();
             this.FSTDID = new System.Windows.Forms.PictureBox();
@@ -91,9 +82,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.GB1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MotorMMD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.STDID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSTDID)).BeginInit();
@@ -169,9 +157,6 @@
             this.GB1.Controls.Add(this.BCentro);
             this.GB1.Controls.Add(this.BIzquierda);
             this.GB1.Controls.Add(this.BDerecha);
-            this.GB1.Controls.Add(this.groupBox5);
-            this.GB1.Controls.Add(this.groupBox4);
-            this.GB1.Controls.Add(this.groupBox1);
             this.GB1.Controls.Add(this.MotorMMD);
             this.GB1.Controls.Add(this.STDID);
             this.GB1.Controls.Add(this.FSTDID);
@@ -240,104 +225,6 @@
             this.BDerecha.Text = "Der";
             this.BDerecha.UseVisualStyleBackColor = true;
             this.BDerecha.Click += new System.EventHandler(this.BDerecha_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.DarkGray;
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(1258, 66);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(138, 92);
-            this.groupBox5.TabIndex = 34;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "T3";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(82, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 39);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "°C";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(6, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 39);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "15.8";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.DarkGray;
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(825, 66);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(138, 92);
-            this.groupBox4.TabIndex = 34;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "T2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(82, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 39);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "°C";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(6, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 39);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "32.1";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(341, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 92);
-            this.groupBox1.TabIndex = 33;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "T1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(82, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 39);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "°C";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(6, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 39);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "20.0";
             // 
             // MotorMMD
             // 
@@ -779,7 +666,7 @@
             // 
             // tMR
             // 
-            this.tMR.Interval = 3000;
+            this.tMR.Interval = 7000;
             this.tMR.Tick += new System.EventHandler(this.TMR_Tick);
             // 
             // button2
@@ -834,12 +721,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             this.GB1.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MotorMMD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.STDID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSTDID)).EndInit();
@@ -921,15 +802,6 @@
         private System.Windows.Forms.PictureBox STDID;
         private System.Windows.Forms.PictureBox MotorMMD;
         private System.Windows.Forms.Timer tMR;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

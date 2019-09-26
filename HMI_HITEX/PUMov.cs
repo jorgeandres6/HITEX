@@ -24,7 +24,7 @@ namespace HMI_HITEX
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void Label1_Click(object sender, EventArgs e)

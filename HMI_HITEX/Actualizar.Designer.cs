@@ -123,9 +123,9 @@
             this.label5.Location = new System.Drawing.Point(1046, 455);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 58);
+            this.label5.Size = new System.Drawing.Size(67, 58);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Kg.";
+            this.label5.Text = "g.";
             // 
             // label6
             // 
@@ -165,9 +165,9 @@
             this.label4.Location = new System.Drawing.Point(1046, 348);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 58);
+            this.label4.Size = new System.Drawing.Size(67, 58);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Kg.";
+            this.label4.Text = "g.";
             // 
             // label3
             // 
@@ -176,9 +176,9 @@
             this.label3.Location = new System.Drawing.Point(1046, 225);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 58);
+            this.label3.Size = new System.Drawing.Size(67, 58);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Kg.";
+            this.label3.Text = "g.";
             // 
             // label1
             // 

@@ -324,7 +324,7 @@ namespace HMI_HITEX
 
             //P1
 
-            if (Aevp1)
+            if (!Aevp1)
             {
                 SP1C.Image = HMI_HITEX.Properties.Resources.C10;
                 FSP1C.Visible = true;
@@ -337,7 +337,7 @@ namespace HMI_HITEX
 
             //P2
 
-            if (Aevp2)
+            if (!Aevp2)
             {
                 SP2C.Image = HMI_HITEX.Properties.Resources.C10;
                 FleSP2C.Visible = true;
@@ -350,7 +350,7 @@ namespace HMI_HITEX
 
             //TDI
 
-            if (Aevtdi)
+            if (!Aevtdi)
             {
                 TubTDIC.Image = HMI_HITEX.Properties.Resources.I101;
                 FSTDIC.Visible = true;
