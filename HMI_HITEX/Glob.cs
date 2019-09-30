@@ -10,6 +10,7 @@ namespace HMI_HITEX
     {
         private static int _Mpos = 1;
         private static string _User = "";
+        private static string _User_type = "";
 
         public static int Mpos
         {
@@ -21,6 +22,12 @@ namespace HMI_HITEX
         {
             get { return _User; }
             set { _User = value; }
+        }
+
+        public static string User_type
+        {
+            get { return _User_type; }
+            set { _User_type = value; }
         }
     }
 }

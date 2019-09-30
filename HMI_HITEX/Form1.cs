@@ -74,6 +74,7 @@ namespace HMI_HITEX
                     this.Hide();
                     Console.WriteLine(dt.Rows[0][0].ToString());
                     Glob.User = textBox1.Text;
+                    Glob.User_type = dt.Rows[0][0].ToString();
                     if (dt.Rows[0][0].ToString()=="Administrador")
                     {
                         Main v = new Main();

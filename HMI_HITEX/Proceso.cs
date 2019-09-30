@@ -224,6 +224,18 @@ namespace HMI_HITEX
             FlechaSP2D.Visible = false;
             FSTDID.Visible = false;
             //FIN DERECHA
+
+            if (Glob.User_type == "Administrador")
+            {
+                button2.Visible = true;
+                button2.Enabled = true;
+            }
+            else
+            {
+                button2.Visible = false;
+                button2.Enabled = false;
+            };
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -287,7 +299,7 @@ namespace HMI_HITEX
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into reporte(Tipo_receta,Fecha_produccion,Poliol1_usado_Kg,Poliol2_usado_Kg,TDI_usado_Kg,Usuario) values(@rec,@fecha,@p1,@p2,@tdi,@usuario)", con);
+                SqlCommand cmd = new SqlCommand("insert into reporte(Nombre_receta,Fecha_produccion,Poliol1_usado_Kg,Poliol2_usado_Kg,TDI_usado_Kg,Usuario) values(@rec,@fecha,@p1,@p2,@tdi,@usuario)", con);
                 cmd.Parameters.AddWithValue("rec", comboBox1.Text);
                 cmd.Parameters.AddWithValue("fecha", today.ToString("yyyy/MM/dd"));
                 int i = int.Parse(comboBox1.Text)-1;

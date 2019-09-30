@@ -38,9 +38,17 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
             "S7netplus": {
               "target": "Package",
               "version": "[0.4.0, )"
+            },
+            "SpreadsheetLight": {
+              "target": "Package",
+              "version": "[3.4.11, )"
             }
           }
         }

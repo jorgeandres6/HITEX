@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SpreadsheetLight;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace HMI_HITEX
 {
@@ -16,16 +19,23 @@ namespace HMI_HITEX
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Hitex.mdf;Integrated Security=True;Connect Timeout=30");
 
+        DataTable dt = new DataTable();
+
+        string fecha;
+        string fechaF;
+
         public Reporte()
         {
             InitializeComponent();
 
+            fecha = dateTimePicker1.Value.Date.ToString("yyyy/MM/dd");
+            fechaF = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
+
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM reporte", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM reporte WHERE Fecha_produccion = '"+fecha+"'", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
                 sda.Fill(dt);
                 Console.WriteLine(sda);
                 dataGridView1.DataSource = dt;
@@ -49,6 +59,34 @@ namespace HMI_HITEX
             this.Hide();
             Main v = new Main();
             v.Show();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            SLDocument doc = new SLDocument();
+            doc.ImportDataTable(1,1,dt,true);
+            doc.SaveAs(@"C:\Users\ADMIN\Documents\Reportes\" + fechaF + ".xlsx");
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dt.Clear();
+            fecha = dateTimePicker1.Value.Date.ToString("yyyy/MM/dd");
+            fechaF = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM reporte WHERE Fecha_produccion = '" + fecha + "'", con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                Console.WriteLine(sda);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("{0} Exception caught.", m);
+            }
         }
     }
 }
