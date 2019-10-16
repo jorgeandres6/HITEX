@@ -16,6 +16,7 @@ namespace HMI_HITEX
         bool ve;
         bool ag;
         bool bo;
+        bool dop;
         private Plc plc = null;
         System.Collections.BitArray salidasPLCbits;
 
@@ -71,6 +72,19 @@ namespace HMI_HITEX
             {
                 pictureBox4.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
                 bo = true;
+            };
+
+            dop = (bool)plc.Read("DB1.DBX48.0");
+
+            if (dop)
+            {
+                pictureBox2.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
+                dop = false;
+            }
+            else
+            {
+                pictureBox2.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+                dop = true;
             };
         }
 
@@ -163,6 +177,37 @@ namespace HMI_HITEX
         private void Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            if (dop)
+            {
+                pictureBox2.Image = HMI_HITEX.Properties.Resources.baseline_toggle_on_white_48dp;
+                dop = false;
+                plc.Write("DB1.DBX48.0", true);
+            }
+            else
+            {
+                pictureBox2.Image = HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+                dop = true;
+                plc.Write("DB1.DBX48.0", false);
+            };
         }
     }
 }

@@ -70,6 +70,7 @@ namespace HMI_HITEX
             //button1.Enabled = false;
             //button4.Enabled = true;
             plc.Write("DB1.DBX40.2", false);
+            MessageBox.Show("Datos correctamente almacenados", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void TmrGlobal_Tick(object sender, EventArgs e)

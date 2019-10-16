@@ -174,7 +174,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(360, 360);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Probar formula";
+            this.button3.Text = "Ingresar formula";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
@@ -202,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.BackgroundImage = global::HMI_HITEX.Properties.Resources.Hitex;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

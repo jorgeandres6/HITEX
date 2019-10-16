@@ -121,14 +121,14 @@
   <data name="I1111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\I1111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Motor\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MezcladorBombeando" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\MezcladorBombeando.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Front" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Flechas\Front.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\Tanque\000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Post" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Flechas\Post.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +154,8 @@
   <data name="001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Tanque\001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Giro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Giro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="D111" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\TuberiasP1P2\D11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_check_circle_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ic_check_circle_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="D00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\D00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +187,9 @@
   <data name="D" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Mezclador\D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="I101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\TuberiaTDI\I10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="D003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\D00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,14 +208,11 @@
   <data name="ProcesoMezcla2_2_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\ProcesoMezcla2_2_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="C002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\TuberiasP1P2\C00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="C11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\C11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="I101" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\TuberiaTDI\I10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="C002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\TuberiasP1P2\C00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="I10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\I10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,20 +220,23 @@
   <data name="Tanque" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Mezclador\Tanque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Mezclador\I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="I11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\I11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiaTDI\C10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\Motor\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ProcesoMezcla2_3_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\ProcesoMezcla2_3_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Mezclador\C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\TuberiasP1P2\C00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="D11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiaTDI\D11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +250,14 @@
   <data name="I00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiaTDI\I00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\TuberiasP1P2\D00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Der" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Flechas\Der.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="I" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\Mezclador\I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Motor\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="D10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiaTDI\D10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,25 +265,25 @@
   <data name="ProcesoMezcla2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\ProcesoMezcla2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\Motor\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Giro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Giro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="110" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\Tanque\110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="D001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\TuberiasP1P2\D00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="D111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\TuberiasP1P2\D11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Nuevas\TuberiasP1P2\C10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="C00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Nuevas\TuberiasP1P2\C00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Tanque\000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_settings_applications_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\ic_settings_applications_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_check_circle_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\ic_check_circle_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hitex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Nuevas\Logo\Hitex.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

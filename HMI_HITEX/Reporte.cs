@@ -66,6 +66,7 @@ namespace HMI_HITEX
             SLDocument doc = new SLDocument();
             doc.ImportDataTable(1,1,dt,true);
             doc.SaveAs(@"C:\Users\ADMIN\Documents\Reportes\" + fechaF + ".xlsx");
+            MessageBox.Show("Documento generado en mis Documentos con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void DateTimePicker1_ValueChanged(object sender, EventArgs e)

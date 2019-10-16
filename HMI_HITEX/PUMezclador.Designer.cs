@@ -49,6 +49,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,10 +75,6 @@
             this.Mezclador = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tmrGlobal = new System.Windows.Forms.Timer(this.components);
-            this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -83,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -94,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SP2C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SP1C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mezclador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -347,6 +347,47 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Valvulas Tuberias";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(29, 578);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(266, 29);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Valvula TDI - Prueba";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
+            this.pictureBox8.Location = new System.Drawing.Point(120, 628);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(92, 95);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 28;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.PictureBox8_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(218, 663);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(100, 29);
+            this.label23.TabIndex = 30;
+            this.label23.Text = "Abierta";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(4, 663);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(110, 29);
+            this.label24.TabIndex = 29;
+            this.label24.Text = "Cerrada";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
@@ -362,11 +403,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(73, 59);
+            this.label1.Location = new System.Drawing.Point(20, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 29);
+            this.label1.Size = new System.Drawing.Size(301, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Valvula Poliol 1";
+            this.label1.Text = "Valvula Poliol Grafitado";
             // 
             // label2
             // 
@@ -403,11 +444,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(73, 217);
+            this.label9.Location = new System.Drawing.Point(29, 225);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(204, 29);
+            this.label9.Size = new System.Drawing.Size(276, 29);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Valvula Poliol 2";
+            this.label9.Text = "Valvula Poliol Comun";
             // 
             // label8
             // 
@@ -576,47 +617,6 @@
             this.tmrGlobal.Enabled = true;
             this.tmrGlobal.Tick += new System.EventHandler(this.TmrGlobal_Tick);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(29, 578);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(266, 29);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Valvula TDI - Prueba";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::HMI_HITEX.Properties.Resources.baseline_toggle_off_white_48dp;
-            this.pictureBox8.Location = new System.Drawing.Point(120, 628);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(92, 95);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 28;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.PictureBox8_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(218, 663);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(100, 29);
-            this.label23.TabIndex = 30;
-            this.label23.Text = "Abierta";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(4, 663);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(110, 29);
-            this.label24.TabIndex = 29;
-            this.label24.Text = "Cerrada";
-            // 
             // PUMezclador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,6 +638,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -649,7 +650,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SP2C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SP1C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mezclador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

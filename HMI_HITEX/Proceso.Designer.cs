@@ -33,9 +33,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.GB1 = new System.Windows.Forms.GroupBox();
-            this.BCentro = new System.Windows.Forms.Button();
-            this.BIzquierda = new System.Windows.Forms.Button();
-            this.BDerecha = new System.Windows.Forms.Button();
             this.MotorMMD = new System.Windows.Forms.PictureBox();
             this.STDID = new System.Windows.Forms.PictureBox();
             this.FSTDID = new System.Windows.Forms.PictureBox();
@@ -154,9 +151,6 @@
             // GB1
             // 
             this.GB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.GB1.Controls.Add(this.BCentro);
-            this.GB1.Controls.Add(this.BIzquierda);
-            this.GB1.Controls.Add(this.BDerecha);
             this.GB1.Controls.Add(this.MotorMMD);
             this.GB1.Controls.Add(this.STDID);
             this.GB1.Controls.Add(this.FSTDID);
@@ -195,36 +189,6 @@
             this.GB1.TabIndex = 5;
             this.GB1.TabStop = false;
             this.GB1.Text = "Proceso";
-            // 
-            // BCentro
-            // 
-            this.BCentro.Location = new System.Drawing.Point(18, 739);
-            this.BCentro.Name = "BCentro";
-            this.BCentro.Size = new System.Drawing.Size(85, 64);
-            this.BCentro.TabIndex = 37;
-            this.BCentro.Text = "Cent";
-            this.BCentro.UseVisualStyleBackColor = true;
-            this.BCentro.Click += new System.EventHandler(this.BCentro_Click);
-            // 
-            // BIzquierda
-            // 
-            this.BIzquierda.Location = new System.Drawing.Point(18, 653);
-            this.BIzquierda.Name = "BIzquierda";
-            this.BIzquierda.Size = new System.Drawing.Size(86, 63);
-            this.BIzquierda.TabIndex = 36;
-            this.BIzquierda.Text = "Izq";
-            this.BIzquierda.UseVisualStyleBackColor = true;
-            this.BIzquierda.Click += new System.EventHandler(this.BIzquierda_Click);
-            // 
-            // BDerecha
-            // 
-            this.BDerecha.Location = new System.Drawing.Point(19, 568);
-            this.BDerecha.Name = "BDerecha";
-            this.BDerecha.Size = new System.Drawing.Size(86, 63);
-            this.BDerecha.TabIndex = 35;
-            this.BDerecha.Text = "Der";
-            this.BDerecha.UseVisualStyleBackColor = true;
-            this.BDerecha.Click += new System.EventHandler(this.BDerecha_Click);
             // 
             // MotorMMD
             // 
@@ -572,7 +536,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(1482, 357);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 692);
+            this.groupBox3.Size = new System.Drawing.Size(447, 593);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Controles";
@@ -708,6 +672,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(34)))), ((int)(((byte)(28)))));
+            this.BackgroundImage = global::HMI_HITEX.Properties.Resources.Hitex;
             this.ClientSize = new System.Drawing.Size(1942, 1080);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
@@ -805,8 +770,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button BCentro;
-        private System.Windows.Forms.Button BIzquierda;
-        private System.Windows.Forms.Button BDerecha;
     }
 }

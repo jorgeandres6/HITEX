@@ -299,7 +299,7 @@ namespace HMI_HITEX
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into reporte(Nombre_receta,Fecha_produccion,Poliol1_usado_Kg,Poliol2_usado_Kg,TDI_usado_Kg,Usuario) values(@rec,@fecha,@p1,@p2,@tdi,@usuario)", con);
+                SqlCommand cmd = new SqlCommand("insert into reporte(Nombre_receta,Fecha_produccion,Poliol_Grafitado_usado_g,Poliol_Comun_usado_g,TDI_usado_g,Usuario) values(@rec,@fecha,@p1,@p2,@tdi,@usuario)", con);
                 cmd.Parameters.AddWithValue("rec", comboBox1.Text);
                 cmd.Parameters.AddWithValue("fecha", today.ToString("yyyy/MM/dd"));
                 int i = int.Parse(comboBox1.Text)-1;
@@ -870,12 +870,49 @@ namespace HMI_HITEX
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRow valores = dt.Rows[comboBox1.SelectedIndex];
-            Vp1 = Convert.ToUInt16(valores["tP1"]);
-            Vp2 = Convert.ToUInt16(valores["tP2"]); 
-            Vtdi = Convert.ToUInt16(valores["tTDI"]);
-            plc.Write("DB1.DBW28", Vp1);
-            plc.Write("DB1.DBW30", Vp2);
-            plc.Write("DB1.DBW32", Vtdi);
+            int Vp1i = Convert.ToInt32(valores["tP1"]);
+            int Vp2i = Convert.ToInt32(valores["tP2"]);
+            int Vtdii = Convert.ToInt32(valores["tTDI"]);
+            ushort aux = 65000;
+            if (Vp1i > aux)
+            {
+                int Vp1_aux = Vp1i-aux;
+                plc.Write("DB1.DBW28", aux);
+                plc.Write("DB1.DBW42", Convert.ToUInt16(Vp1_aux));
+            }
+            else
+            {
+                Vp1 = Convert.ToUInt16(Vp1i);
+                plc.Write("DB1.DBW28", Vp1);
+                plc.Write("DB1.DBW42", Convert.ToUInt16(0));
+            }
+
+            if (Vp2i > aux)
+            {
+                int Vp1_aux = Vp2i - aux;
+                plc.Write("DB1.DBW30", aux);
+                plc.Write("DB1.DBW44", Convert.ToUInt16(Vp1_aux));
+            }
+            else
+            {
+                Console.Write(Vp2i);
+                Vp2 = Convert.ToUInt16(Vp2i);
+                plc.Write("DB1.DBW30", Vp2);
+                plc.Write("DB1.DBW44", Convert.ToUInt16(0));
+            }
+
+            if (Vtdii > aux)
+            {
+                int Vtdi_aux = Vtdii - aux;
+                plc.Write("DB1.DBW32", aux);
+                plc.Write("DB1.DBW46", Convert.ToUInt16(Vtdi_aux));
+            }
+            else
+            {
+                Vtdi = Convert.ToUInt16(Vtdii);
+                plc.Write("DB1.DBW32", Vtdi);
+                plc.Write("DB1.DBW46", Convert.ToUInt16(0));
+            }
 
         }
 

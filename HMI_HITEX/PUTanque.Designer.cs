@@ -79,7 +79,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1064, 799);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Poliol 2";
+            this.groupBox1.Text = "Poliol Común";
             // 
             // Motor
             // 
